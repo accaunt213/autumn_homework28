@@ -342,7 +342,7 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         f"OK: {passed}, FAIL: {failed}, TIMEOUT: {timeouts}, NO_EXPECTED: {missing_expected}, EXEC_MISSING: {missing_exec}"
     )
 
-    if failed or timeouts or missing_exec:
+    if failed or timeouts or missing_exec or missing_expected:
         return 1
     return 0
 
